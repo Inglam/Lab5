@@ -12,6 +12,7 @@ public class BankAccount {
     /*
      * You may want to use this to distinguish between different kinds of accounts.
      */
+
     public enum BankAccountType {
         CHECKINGS,
         SAVINGS,
@@ -27,9 +28,60 @@ public class BankAccount {
     private double interestEarned;
 
     public BankAccount(final String name, final BankAccountType accountCategory) {
+        ownerName =  name;
+        accountType = accountCategory;
+        Bank.totalAccounts++;
         /*
          * Implement this function
          */
+    }
+
+    public double getAccountBalance() {
+        return accountBalance;
+    }
+
+    public void setAccountBalance(final double a) {
+        accountBalance = a;
+    }
+
+    public BankAccountType getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(final BankAccountType a) {
+        accountType = a;
+    }
+
+    public double getInterestEarned() {
+        return interestEarned;
+    }
+
+    public void setInterestEarned(final double a) {
+        interestEarned = a;
+    }
+
+    public double getInterestRate() {
+        return interestRate;
+    }
+
+    public void setInterestRate(final double a) {
+        interestRate = a;
+    }
+
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(final int a) {
+        accountNumber = a;
+    }
+
+    public String getOwnerName() {
+        return ownerName;
+    }
+
+    public void setOwnerName(final String a) {
+        ownerName = a;
     }
 
     /*
